@@ -38,7 +38,7 @@
 
   (3) Navigation Controller를 사용해 화면 전환하기
     
-    - 계층적인 성격을 띄는 content 구조를 관리하기 위한 컨트롤러이다.
+    - 계층적인 성격을 띠는 content 구조를 관리하기 위한 컨트롤러이다.
     - Navugation Controller는 뷰 컨트롤러의 전환을 직접 컨트롤하고 앱에 내비게이션 정보를 표시 하는 역할을 수행한다. 
     - Navigation Stack으로 자식 뷰 컨트롤러를 관리한다. 
     - pushViewController 메서드를 사용해서 뷰 컨트롤러를 스택에 추가하고, popViewController메서드를 사용해서 스택에 있는 뷰 컨트롤러를 제거한다. 
