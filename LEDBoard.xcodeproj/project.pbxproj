@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A7DB4B0275A4FED0003F8DD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DB4AF275A4FED0003F8DD /* SettingViewController.swift */; };
 		9AAC6713273BE0CE00ADB00C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC6712273BE0CE00ADB00C /* AppDelegate.swift */; };
 		9AAC6715273BE0CE00ADB00C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC6714273BE0CE00ADB00C /* SceneDelegate.swift */; };
 		9AAC6717273BE0CE00ADB00C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC6716273BE0CE00ADB00C /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A7DB4AF275A4FED0003F8DD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9AAC670F273BE0CE00ADB00C /* LEDBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEDBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAC6712273BE0CE00ADB00C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AAC6714273BE0CE00ADB00C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				9AAC671B273BE0CF00ADB00C /* Assets.xcassets */,
 				9AAC671D273BE0CF00ADB00C /* LaunchScreen.storyboard */,
 				9AAC6720273BE0CF00ADB00C /* Info.plist */,
+				9A7DB4AF275A4FED0003F8DD /* SettingViewController.swift */,
 			);
 			path = LEDBoard;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				9AAC6717273BE0CE00ADB00C /* ViewController.swift in Sources */,
 				9AAC6713273BE0CE00ADB00C /* AppDelegate.swift in Sources */,
 				9AAC6715273BE0CE00ADB00C /* SceneDelegate.swift in Sources */,
+				9A7DB4B0275A4FED0003F8DD /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
