@@ -6,6 +6,11 @@
 //
 
 import UIKit
+//delegate pattern을 사용하여 설정 화면에서 메인화면으로 데이터 전달
+protocol LEDBoardSettingDelegate: AnyObject {
+    func changedSetting(text: String?, textColor: UIColor, backgroundColor: UIColor)
+}
+
 
 class SettingViewController: UIViewController {
 
@@ -16,6 +21,8 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var btnBlack: UIButton!
     @IBOutlet weak var btnBlue: UIButton!
     @IBOutlet weak var btnOrange: UIButton!
+    
+    weak var delegate: LEDBoardSettingDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
