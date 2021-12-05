@@ -23,6 +23,10 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var btnOrange: UIButton!
     
     weak var delegate: LEDBoardSettingDelegate?
+    var textColor: UIColor = .yellow
+    var backgroundColor: UIColor = .black
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,27 +38,32 @@ class SettingViewController: UIViewController {
     @IBAction func tapTextColorButton(_ sender: UIButton) {
         //한 액션함수에 여러 버튼을 설정할 경우 sender 파라미터를 통해 어떤 버튼이 tap되었는지 알 수 있다.
         //버튼이 tap된 경우 sender 파라미터에 해당 버튼이 인스턴스로 전달되기 때문에 어떤 버튼이 선택되었는지 알 수 있다.
+        //버튼이 선택될 때마다 color를 변수에 저장한다.
         
         if sender == self.btnYellow {
-            self.changeTextColor(color: .yellow)
+            self.textColor = .yellow
         }else if sender == self.btnPurple {
-            self.changeTextColor(color: .purple)
+            self.textColor = .purple
         }else {
-            self.changeTextColor(color: .green)
+            self.textColor = .green
         }
+        
+        self.changeTextColor(color: self.textColor)
     }
     
     @IBAction func tapBackgroundColorButton(_ sender: UIButton) {
         //한 액션함수에 여러 버튼을 설정할 경우 sender 파라미터를 통해 어떤 버튼이 tap되었는지 알 수 있다.
         //버튼이 tap된 경우 sender 파라미터에 해당 버튼이 인스턴스로 전달되기 때문에 어떤 버튼이 선택되었는지 알 수 있다.
+        //버튼이 선택될 때마다 color를 변수에 저장한다.
         
         if sender == self.btnBlack {
-            self.changeBackgroundColor(color: .black)
+            self.backgroundColor = .black
         }else if sender == self.btnOrange {
-            self.changeBackgroundColor(color: .orange)
+            self.backgroundColor = .orange
         }else {
-            self.changeBackgroundColor(color: .blue)
+            self.backgroundColor = .blue
         }
+        self.changeBackgroundColor(color: backgroundColor)
     }
     
     @IBAction func tapSaveButton(_ sender: UIButton) {
