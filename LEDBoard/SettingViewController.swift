@@ -23,6 +23,7 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var btnOrange: UIButton!
     
     weak var delegate: LEDBoardSettingDelegate?
+    var textLED: String?
     var textColor: UIColor = .yellow
     var backgroundColor: UIColor = .black
     
@@ -30,7 +31,17 @@ class SettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.configureView()
+    }
+    
+    func configureView() {
+        //옵셔널 바인딩
+        if let textLED = textLED { //null이면 false
+            self.txtField.text = textLED
+        }
+        
+        self.changeTextColor(color: textColor)
+        self.changeBackgroundColor(color: backgroundColor)
         
     }
     
@@ -67,6 +78,12 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func tapSaveButton(_ sender: UIButton) {
+        self.delegate?.changedSetting(
+            text: self.txtField.text,
+            textColor: self.textColor,
+            backgroundColor: self.backgroundColor)
+        
+        self.navigationController?.popViewController(animated: true) //내비게이션 스택에서 top 뷰 컨트롤러 제거, 즉 이전화면으로 전환
     }
     
     private func changeTextColor(color: UIColor) {
