@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        //navigationBar bottom bolder line 지우기
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        //self.navigationController?.navigationBar.isTranslucent = false -> 스토리보드에서 설정 가능
+        
         self.lblContents.textColor = .yellow
     }
 

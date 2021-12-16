@@ -83,6 +83,11 @@ class SettingViewController: UIViewController {
             textColor: self.textColor,
             backgroundColor: self.backgroundColor)
         
+        //LED 색 설정에 따른 Navigation Bar 색 설정
+        self.navigationController?.navigationBar.tintColor = textColor
+        self.navigationController?.navigationBar.barTintColor = backgroundColor
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: textColor]
+        
         self.navigationController?.popViewController(animated: true) //내비게이션 스택에서 top 뷰 컨트롤러 제거, 즉 이전화면으로 전환
     }
     
